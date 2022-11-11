@@ -11,7 +11,7 @@ const Hero = () => {
             </h1>
             <div className='grid md:grid-cols-2 grid-cols-1'>
                 <div>
-                    <p className='pr-16 mb-12'>
+                    <p className='md:pr-16 mb-12'>
                         We will design your website with the best options and help to complete our full services.
                     </p>
                     <div className='flex items-center justify-center md:justify-start'>
