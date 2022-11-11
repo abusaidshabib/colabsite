@@ -1,5 +1,11 @@
 import React from 'react';
 import logo from '../../../assets/CodeZerox-new-update.png';
+import './Header.css';
+import home from '../../../assets/menu-icons/Home.png';
+import service from '../../../assets/menu-icons/Service.png';
+import portfolio from '../../../assets/menu-icons/Portfolio.png';
+import blog from '../../../assets/menu-icons/Blog.png';
+import faq from '../../../assets/menu-icons/FAQ.png';
 
 const Header = () => {
     return (
@@ -17,7 +23,16 @@ const Header = () => {
                 </div>
             </div>
             <div className='w-20'>
-
+                <img className='w-10' src={home} alt=""/>
+                <br/>
+                <img className='w-10' src={service} alt=""/>
+                <br/>
+                <img className='w-10' src={portfolio} alt=""/>
+                <br/>
+                <img className='w-10' src={blog} alt=""/>
+                <br/>
+                <img className='w-10' src={faq} alt=""/>
+                <br/>
             </div>
         </div>
     );
