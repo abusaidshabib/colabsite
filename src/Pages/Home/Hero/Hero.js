@@ -4,8 +4,8 @@ import './Hero.css';
 
 const Hero = () => {
     return (
-        <div className='hero-section md:text-left 2xl:pl-48 min-h-screen text-center px-16 2xl:py-28 py-20 text-white'>
-            <h1 className='md:text-5xl text-4xl 2xl:text-7xl font-bold 2xl:leading-snug leading-tight mb-16'>DESIGN YOUR WEBSITE WITH <br />
+        <div className='hero-section text-center md:text-left text-white py-20 px-16 md:px-24 lg:px-28 xl:px-32 2xl:pl-48 2xl:py-28 min-h-screen'>
+            <h1 className='text-2xl md:text-4xl lg:text-5xl 2xl:text-6xl font-bold md:leading-snug lg:leading-snug 2xl:leading-snug mb-16'>DESIGN YOUR WEBSITE WITH <br />
                 HOSTING AND USE BEST MARKETING<br />
                 STRATEGY
             </h1>
