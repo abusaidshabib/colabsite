@@ -16,3 +16,7 @@
 .portfoliobtnBg:hover{
     color: #119DA4;
 }
+
+.leftnav:hover .navItem{
+    display: inline;
+}
