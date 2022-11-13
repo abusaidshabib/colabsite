@@ -26,7 +26,9 @@ const Hero = () => {
                             </Link>
                             <p className='mr-10'>or</p>
                             <Link>
-                                About Us
+                                <button className="bg-white 2xl:py-3 2xl:px-6 2xl:text-xl contactbtn font-semibold hover:bg-blue-500 py-2 px-4 btnBorder rounded">
+                                    Contact Us
+                                </button>
                             </Link>
                         </div>
                     </div>

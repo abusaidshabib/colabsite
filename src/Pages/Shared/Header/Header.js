@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+import icon from '../../../assets/codezeroxfav.svg';
 import logo from '../../../assets/Logo.svg';
 import './Header.css';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+    const [stretch, setStretch] =useState(false);
+    const handleStretch = () => {
+        setStretch(!stretch);
+    }
     return (
         <div>
             <div className='border-b-2 relative z-10'>
-                <div className='grid grid-cols-2 mx-auto 2xl:px-48 xl:px-32 lg:px-28 md:px-24 h-20 items-center fixed bg-white min-w-full'>
+                <div className='grid-cols-2 mx-auto 2xl:px-48 xl:px-32 lg:px-28 hidden md:px-24 h-20 items-center bg-white min-w-full'>
                     <div className='text-right'>
                         <img className='w-56' src={logo} alt="" />
                     </div>
@@ -18,8 +23,12 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <div className='grid w-20 h-screen border-r-2 contactbtn border-gray-500 place-items-center fixed hover:w-60 leftnav transition-all duration-300'>
-                <div className='grid gap-5'>
+
+            <div onMouseEnter={()=>setStretch(!stretch)} onMouseLeave={()=>setStretch(!stretch)} className={`grid w-20 h-screen border-r-2 bg-white border-gray-500 fixed hover:w-60 leftnav transition-all duration-300`}>
+                <div className='grid grid-rows-2 place-items-center'>
+                    <img className={`${stretch? 'w-44':'w-10'}`} src={stretch? logo: icon} alt="" />
+                </div>
+                <div className={`'flex gap-5 h-screen' ${stretch?'justify-start' : 'place-items-center'}`}>
                     <Link className='flex items-center'>
                         <svg className='fill-gray-400 w-8' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 418.5 418.991"><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><path d="M415.572,201.919l-199-199a10.649,10.649,0,0,0-14.643,0l-199,199a10,10,0,0,0,14.143,14.143L209.25,23.883,401.429,216.062a10,10,0,0,0,14.143-14.143Z" /><path d="M358.5,199.991a10,10,0,0,0-10,10v159a30.034,30.034,0,0,1-30,30H100a30.034,30.034,0,0,1-30-30v-159a10,10,0,1,0-20,0v159a50.057,50.057,0,0,0,50,50H318.5a50.056,50.056,0,0,0,50-50v-159A10,10,0,0,0,358.5,199.991Z" /></g></g></svg>
                         <span className='text-gray-400 hidden mx-2 mt-1 navItem'>HOME</span>
