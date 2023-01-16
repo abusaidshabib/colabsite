@@ -1,12 +1,14 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import TopNav from '../Components/TopNav/TopNav';
 import Footer from '../Pages/Shared/Footer/Footer';
 import Header from '../Pages/Shared/Header/Header';
 
 const Main = () => {
     return (
         <div>
-            <Header></Header>
+            <TopNav></TopNav>
+            {/* <Header></Header> */}
             <Outlet></Outlet>
             <Footer></Footer>
         </div>

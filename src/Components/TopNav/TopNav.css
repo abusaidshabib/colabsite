@@ -1,0 +1,49 @@
+.top-nav{
+    width: 100vw;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 0 6%;
+    position: absolute;
+    background-color: #ffffff;
+}
+
+.top-nav-logo{
+    width: 100%;
+}
+
+.nav-contact{
+    text-align: right;
+}
+
+.nav-contact a{
+    position: relative;
+    padding: 8px 16px;
+    border: 1px solid var(--primaryColor);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    z-index: 2;
+    transition: all 0.3s;
+}
+
+.nav-contact a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--secondaryColor);
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+.nav-contact a:hover::before{
+    width: 100%;
+    color: #ffffff;
+}
+.nav-contact a:hover{
+    color: #ffffff;
+    border: 1px solid var(--secondaryColor);
+}
